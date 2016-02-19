@@ -10,16 +10,17 @@ function plugin (opts) {
         exclude: []
     });
 
-    whitelist = flatten(union([opts.exclude], ['contents', 'mode', 'stats']));
+    var whitelist = flatten(union([opts.exclude], ['mode', 'stats']));
 
     return function (files, metalsmith, done) {
 
         for (var file in files) {
 
-            for (prop in files[file]) {
+            for (var prop in files[file]) {
 
                 if (whitelist.indexOf(prop) === -1) {
-                    if (! files[file].hasOwnProperty(opts.name)) {
+
+                    if (!files[file].hasOwnProperty(opts.name)) {
                         files[file][opts.name] = {};
                     }
 
