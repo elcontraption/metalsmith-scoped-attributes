@@ -3,7 +3,7 @@
   "description": "A Metalsmith plugin to scope local attributes to the document.",
   "author": "Darin Reid <darin@elcontraption.com>",
   "repository": "git@github.com:elcontraption/metalsmith-scoped-attributes.git",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
